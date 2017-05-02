@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 25
+
+development:
+  <<: *default
+  database: bikewise_development
+
+
+test:
+  <<: *default
+  database: bikewise_test
+
+production:
+  <<: *default
+  database: bikewise_production
+  username: bikewise
+  password: <%= ENV['BIKEWISE_DATABASE_PASSWORD'] %>

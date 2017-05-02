@@ -1,0 +1,55 @@
+header {
+  padding: 50px 10px 20px;
+  h1 { margin: 0; }
+}
+
+.dev-sidebyside {
+  @include clearfix;
+  position: relative;
+  border-top: 1px solid $gray-lighter;
+  .desc-side { padding: 10px; }
+  .data-side {
+    padding: 10px;
+    font-family: Monaco, 'Open Sans', sans-serif;
+    background: $dev-code-bg;
+    color: $dev-code-text;
+    text-shadow: 0 1px 0 rgba(0,0,0,.7px);
+    font-weight: 400;
+    h1, h2, h3, h4, h5 { color: white; }
+    h2 { margin: 0 0 1em; }
+    h3, h4 { margin: 10px 0 0; }
+    pre {
+      background: none;
+      border: none;
+      border-radius: none;
+      color: #dae4f2;
+    }
+  }
+  #incidents_list { display: none; }
+}
+
+@media (min-width: 600px) {
+  .dev-sidebyside {
+    #incidents_list { display: block; }
+    .desc-side {
+      padding: 40px 10px;
+      width: 48%;
+      float: left;
+    }
+    .data-side {
+      padding: 60px 20px;
+      float: left;
+      width: 50%;
+      margin-left: 2%;
+      right: 0; top: 0;
+      border-left: 1px solid $gray-lighter;
+      min-height: 100%;
+    }
+  }
+}
+
+.readme {
+  border-top: 1px solid $gray-lighter;
+  padding-top: 80px;
+  .markdown-body { max-width: 45em; margin: 0 auto; }
+}

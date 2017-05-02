@@ -1,0 +1,25 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+dump.rdb
+.DS_Store
+
+# Ignore cassettes
+spec/cassettes/*
+
+# Ignore .env
+.env
+
+# Ignore local uploads
+public/uploads
+
+# Ignore rvm stuff
+.rvmrc
+.ruby-gemset
+.ruby-version
+.powenv
+
+bikewise_data/*
